@@ -1,7 +1,7 @@
 import time
 import requests
 
-API_KEY = "565c19562032beb685f6a465a5e161ea"  # Replace with your actual API key
+API_KEY = "565c19562032beb685f6a465a5e161ea"  
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 favorite_cities = []
 
@@ -9,7 +9,7 @@ def get_weather(city):
     params = {
         "q": city,
         "appid": API_KEY,
-        "units": "metric"  # Use metric units for temperature in Celsius
+        "units": "metric"  # for temp in celsius
     }
     response = requests.get(BASE_URL, params=params)
     data = response.json()
